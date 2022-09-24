@@ -15,6 +15,7 @@ pip3 install labelme
 
 - Extract image from mp4
 ```
+cd YOLOv7-Pytorch-Segmentation
 python3 extract_frames_opencv.py dataset.mp4
 ```
 
