@@ -27,6 +27,7 @@ labelme
 - Separate dataset into train and val folder
 ```
 python3 labelme2yolov7seg.py --labelme_dataset_dir ./dataset --train_val_ratio 0.2 --ouput_dataset_dir ./yolov7_seg_dataset --image_name dataset
+mv yolov7_seg_dataset/ data
 ```
 
 ## 2. Train your own dataset
