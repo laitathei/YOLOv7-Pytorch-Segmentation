@@ -252,7 +252,7 @@ python3 segment/train.py --data data/custom.yaml --batch 8 --weights data/yolov7
 ## 3. Inference your own model
 - Inference video
 ```
-python3 segment/train.py --data data/custom.yaml --batch 8 --weights data/yolov7-seg.pt --cfg data/yolov7-seg.yaml --epochs 200 --name yolov7-seg --img 640 --hyp data/hyp.scratch-high.yaml
+python3 segment/predict.py --weights "runs/train-seg/yolov7-seg/weights/best.pt" --source "test.mp4"
 ```
 
 ![image](https://github.com/laitathei/YOLOv7-Pytorch-Segmentation/blob/master/test.gif)
