@@ -8,6 +8,7 @@ git clone https://github.com/laitathei/YOLOv7-Pytorch-Segmentation.git
 
 - Install dependency
 ```
+cd YOLOv7-Pytorch-Segmentation
 pip3 install --upgrade pip
 pip3 install -r requirements.txt
 pip3 install labelme
