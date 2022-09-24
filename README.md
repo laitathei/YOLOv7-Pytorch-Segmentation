@@ -257,3 +257,6 @@ python3 segment/train.py --data data/custom.yaml --batch 8 --weights data/yolov7
 
 ![image](https://github.com/laitathei/YOLOv7-Pytorch-Segmentation/blob/master/test.gif)
 
+
+## Reference
+- https://github.com/WongKinYiu/yolov7/tree/u7/seg
