@@ -253,4 +253,6 @@ python3 segment/train.py --data data/custom.yaml --batch 8 --weights data/yolov7
 python3 segment/train.py --data data/custom.yaml --batch 8 --weights data/yolov7-seg.pt --cfg data/yolov7-seg.yaml --epochs 200 --name yolov7-seg --img 640 --hyp data/hyp.scratch-high.yaml
 ```
 
-![video](https://github.com/laitathei/YOLOv7-Pytorch-Segmentation/blob/master/runs/predict-seg/exp/test.mp4)
+https://user-images.githubusercontent.com/56575156/192088828-716854f4-b0f6-4630-ae36-e1bc8c52bc8b.mp4
+
+
