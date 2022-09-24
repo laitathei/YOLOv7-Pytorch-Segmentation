@@ -1,0 +1,11 @@
+train: "./data/yolov7_seg_dataset/train/"
+val: "./data/yolov7_seg_dataset/val/"
+
+# number of classes
+nc: 1
+
+# class names
+names: ['raspberry pi']
+
+
+
