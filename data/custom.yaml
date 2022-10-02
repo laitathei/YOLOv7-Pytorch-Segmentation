@@ -5,7 +5,7 @@ val: "./data/yolov7_seg_dataset/val/"
 nc: 1
 
 # class names
-names: ['raspberry pi']
+names: ['car']
 
 
 

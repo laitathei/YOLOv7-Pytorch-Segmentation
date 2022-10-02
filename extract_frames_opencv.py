@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # i.e if video of duration 30 seconds, saves 10 frame per second = 300 frames saved in total
-SAVING_FRAMES_PER_SECOND = 2
+SAVING_FRAMES_PER_SECOND = 1
 id = 0 # change it if do building some dataset with different video source
         # if source 1 have 55 images, you should change to id = 55
         # then source 2 have 66, you should change to id = 55+66

@@ -4,8 +4,9 @@ import shutil
 import argparse
 import sys
 from sklearn.model_selection import train_test_split
+from os import path
 
-class_list = ["raspberry pi"]
+class_list = ["car"]
 
 def labelme_json_to_yolov7_seg(labelme_dataset_dir):
 
@@ -69,13 +70,19 @@ def train_val_split(labelme_dataset_dir,ouput_dataset_dir,image_name,train_val_r
     # make copy of json,txt,jpg to output dataset directory
     train_idxs, val_idxs = train_test_split(range(len(json_files)), test_size=train_val_ratio)
     for i in range (len(train_idxs)):
-        shutil.copy2(labelme_dataset_dir+"/"+image_name+str(train_idxs[i])+".jpg", train_image_folder) # move train txt
-        shutil.copy2(labelme_dataset_dir+"/"+image_name+str(train_idxs[i])+".txt", train_label_folder) # move train image
-        shutil.copy2(labelme_dataset_dir+"/"+image_name+str(train_idxs[i])+".json", train_json_folder) # move train json
+        if path.exists(labelme_dataset_dir+"/"+image_name+"_"+str(train_idxs[i])+".jpg"):
+            shutil.copy2(labelme_dataset_dir+"/"+image_name+"_"+str(train_idxs[i])+".jpg", train_image_folder) # move train txt
+        if path.exists(labelme_dataset_dir+"/"+image_name+"_"+str(train_idxs[i])+".txt"):
+            shutil.copy2(labelme_dataset_dir+"/"+image_name+"_"+str(train_idxs[i])+".txt", train_label_folder) # move train image
+        if path.exists(labelme_dataset_dir+"/"+image_name+"_"+str(train_idxs[i])+".json"):
+            shutil.copy2(labelme_dataset_dir+"/"+image_name+"_"+str(train_idxs[i])+".json", train_json_folder) # move train json
     for i in range (len(val_idxs)):
-        shutil.copy2(labelme_dataset_dir+"/"+image_name+str(val_idxs[i])+".jpg", val_image_folder) # move val txt
-        shutil.copy2(labelme_dataset_dir+"/"+image_name+str(val_idxs[i])+".txt", val_label_folder) # move val image
-        shutil.copy2(labelme_dataset_dir+"/"+image_name+str(val_idxs[i])+".json", val_json_folder) # move val json
+        if path.exists(labelme_dataset_dir+"/"+image_name+"_"+str(val_idxs[i])+".jpg"):
+            shutil.copy2(labelme_dataset_dir+"/"+image_name+"_"+str(val_idxs[i])+".jpg", val_image_folder) # move val txt
+        if path.exists(labelme_dataset_dir+"/"+image_name+"_"+str(val_idxs[i])+".txt"):
+            shutil.copy2(labelme_dataset_dir+"/"+image_name+"_"+str(val_idxs[i])+".txt", val_label_folder) # move val image
+        if path.exists(labelme_dataset_dir+"/"+image_name+"_"+str(val_idxs[i])+".json"):
+            shutil.copy2(labelme_dataset_dir+"/"+image_name+"_"+str(val_idxs[i])+".json", val_json_folder) # move val json
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
