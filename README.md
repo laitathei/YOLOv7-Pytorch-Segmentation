@@ -261,3 +261,6 @@ python3 segment/predict.py --weights "runs/train-seg/yolov7-seg/weights/best.pt"
 
 ## Reference
 - https://github.com/WongKinYiu/yolov7/tree/u7/seg
+
+## Youtube video demo
+- https://www.youtube.com/watch?v=Rff5RhCOj30&t=3s
